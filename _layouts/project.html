@@ -9,7 +9,10 @@ layout: default
 
 {{ content }}
 
-{{ page.galleryImages }}
+
+{% for image in page.galleryImages %}
+  <img src="{{ image }}" alt=""><br>
+{% endfor %}
 
 <nav aria-label="Adjacent Posts">
   <ul>
