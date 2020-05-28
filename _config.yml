@@ -43,6 +43,10 @@ sass:
 compress_html:
   clippings: all
 
+collections:
+  projects:
+    output: true
+
 # set some common post defaults
 defaults:
   -
@@ -52,6 +56,12 @@ defaults:
     values:
       layout: "post" # set the correct default template for a post
       section: "post" # set the root section name
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "projects" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "project" # set the correct default template for a post
 
 # Build settings
 markdown: kramdown
